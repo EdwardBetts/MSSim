@@ -54,7 +54,7 @@ class Network():
         counter = 1
         for time, client, content in self.workload:
             if not counter%1000:
-                sys.stdout.write('\r{0:.2f}%'.format(100*counter/float(self.N_MEASURED_REQUESTS)))
+                sys.stdout.write('\r{:.2%}'.format(counter/float(self.N_MEASURED_REQUESTS)))
                 sys.stdout.flush()
                 sleep(1)
 #            if not counter%100000:
